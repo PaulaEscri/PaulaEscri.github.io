@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +17,7 @@
 <body>
 
   <nav id="menu" class="barra">
+
     <figure class="logo">
       <img src="./fotos/LogoPaula1.png" alt="Logo">
     </figure>
@@ -31,27 +33,63 @@
   <main>
     <section class="Inicio" id="inicio">
       <canvas class="scalesCanvas" aria-hidden="true"></canvas>
-        <p class="Bienvenido">¡Bienvenido al Portafolio de Paula Escribano Reina!</p>
+      <p class="Bienvenido">¡Bienvenido al Portafolio de Paula Escribano Reina!</p>
       <div class="ContenidoInicio">
-        ...
       </div>
     </section>
 
-    <section class="SobreMi" id="sobre-mi">Sobre mi</section>
+    <section class="SobreMi" id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>Soy Paula Escribano, estoy estudiando un Grado Superior de Desarrollo Web y con ganas de desarrollar proyectos
+        y darles vida.</p>
+    </section>
+
+    <section class="Skills" id="skills">
+      <h2 class="skillsTitle">Skills</h2>
+
+      <div class="skills-grid" id="skills-grid">
+        <button class="skillCard item" data-layout-id="js" data-duration="650">
+          <h2 data-layout-id="js-title">JavaScript</h2>
+          <h3 data-layout-id="js-level">Intermedio</h3>
+
+          <!-- texto en el modal -->
+          <p>
+            ES6+, DOM, fetch, validaciones, async/await, buenas prácticas.
+          </p>
+
+          <!-- datos para barritas d habilidades -->
+          <div class="skillMeta" data-skill="70" data-layout-id="js-meta"></div>
+        </button>
+
+        <button class="skillCard item" data-layout-id="css" data-duration="650">
+          <h2 data-layout-id="css-title">CSS</h2>
+          <h3 data-layout-id="css-level">Intermedio</h3>
+          <p>
+            Flexbox, grid, responsive, micro-interacciones, layout.
+          </p>
+          <div class="skillMeta" data-skill="70" data-layout-id="css-meta"></div>
+        </button>
+
+        <button class="skillCard item" data-layout-id="node" data-duration="650">
+          <h2 data-layout-id="node-title">Node.js</h2>
+          <h3 data-layout-id="node-level">Básico</h3>
+          <p>
+            Express, APIs REST, JWT, bcrypt, estructura backend.
+          </p>
+          <div class="skillMeta" data-skill="55" data-layout-id="node-meta"></div>
+        </button>
+      </div>
+    </section>
 
     <section class="secciones" id="proyectos">
       <h2>Mis Proyectos</h2>
-
-      <section class="Proyecto">
-        <article class="proyecto1">Proyecto 1</article>
-        <article class="proyecto2">Proyecto 2</article>
-      </section>
+      <p>Próximamente...</p>
     </section>
 
-    <section class="Contacto" id="contacto">Contacto</section>
+
   </main>
 
-  <footer class="footer">
+  <footer class="footer" id="contacto">
     <section class="info">
       <p>Contacto:</p>
 
@@ -67,6 +105,8 @@
     <p>2025 © Paula Escribano Reina</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/animejs/dist/bundles/anime.umd.min.js"></script>
   <script src="./main.js"></script>
 </body>
+
 </html>
