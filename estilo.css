@@ -8,6 +8,7 @@ html {
   box-sizing: inherit;
 }
 
+/* h */
 body {
   margin: 0;
   Font-family: arial;
@@ -19,24 +20,27 @@ body {
       #0F6175 100%);
 
 }
-.Inicio{
+
+.Inicio {
   position: relative;
   overflow: hidden;
 }
 
 /* Canvas de fondo */
-.scalesCanvas{
+.scalesCanvas {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
-  opacity: 1.5;           /* baja o sube a gusto */
-  mix-blend-mode: screen;  /* prueba: screen / overlay / soft-light */
+  opacity: 1.5;
+  /* baja o sube a gusto */
+  mix-blend-mode: screen;
+  /* prueba: screen / overlay / soft-light */
 }
 
 /* Asegura que tu contenido quede encima */
-.Inicio > *:not(canvas){
+.Inicio>*:not(canvas) {
   position: relative;
   z-index: 1;
 }
@@ -51,53 +55,53 @@ body {
   height: 22vh;
   display: flex;
   font-variant: small-caps;
-  
+
   align-items: center;
   background: #264654;
   background: radial-gradient(circle, rgba(38, 70, 84, 1) 0%, rgba(150, 0, 90, 1) 94%);
   box-shadow: 5px 5px 30px 5px;
 
-            >.logo {
-              margin: 0;
-              margin-right: 4vw;
-            }
+  >.logo {
+    margin: 0;
+    margin-right: 4vw;
+  }
 
-            >.logo img {
-              width: 20vh;
-              height: 20vh;
-              inline-size: 1;
-              margin-left: 8vh;
-              border-radius: 15vw;
-              border: 3px solid rgb(0, 0, 0);
-              object-fit: cover;
-            }
+  >.logo img {
+    width: 20vh;
+    height: 20vh;
+    inline-size: 1;
+    margin-left: 8vh;
+    border-radius: 15vw;
+    border: 3px solid rgb(0, 0, 0);
+    object-fit: cover;
+  }
 
 
-              >.lista {
-                list-style: none;
-                margin: auto;
-               
-                /* width: 120vh; */
+  >.lista {
+    list-style: none;
+    margin: auto;
 
-                >.link {
+    /* width: 120vh; */
 
-                  text-decoration: none;
-                  color: white;
-                  font-size: 2vw;
-                  transition: .25s;
-                  padding: 2vw;
+    >.link {
 
-                  /* margin-right: 5vw; */
-                }
+      text-decoration: none;
+      color: white;
+      font-size: 2vw;
+      transition: .25s;
+      padding: 2vw;
 
-                >.link:hover {
-                  color: #C00077;
-                }
+      /* margin-right: 5vw; */
+    }
 
-                >.activo {
-                  color: #96c0ff;
-                }
-              }
+    >.link:hover {
+      color: #C00077;
+    }
+
+    >.activo {
+      color: #96c0ff;
+    }
+  }
 
 }
 
@@ -106,72 +110,74 @@ main {
   height: 300vh;
   margin: auto;
 
-          section {
-              margin-bottom: 11vw;
-              height: 60vh;
-            }
-            >.Inicio {
-              /* margin: 2vh; */
-              /* font-size: rem; */
-              font-weight: bold;
-            /* background-color: white; */
-              p {
-                font-family: 'Inter';
-                font-size: 2.5rem;
-                color:antiquewhite;
-              text-align: center;
-              padding-top: 15vh;
-              }
-            }
+  section {
+    margin-bottom: 11vw;
+    height: 60vh;
+  }
+
+  >.Inicio {
+    /* margin: 2vh; */
+    /* font-size: rem; */
+    font-weight: bold;
+
+    /* background-color: white; */
+    p {
+      font-family: 'Inter';
+      font-size: 2.5rem;
+      color: antiquewhite;
+      text-align: center;
+      padding-top: 15vh;
+    }
+  }
 
 
-              >.SobreMi {
-              font-size: 1.4rem;
-              width: 95vw;
-              /* height: 25vh; */
-              background-color: aqua;
-            }
-  
-            >.secciones {
-              width: 95vw;
-              /* height: 25vh; */
-              text-align: center;
-              font-size: 1.75rem;
-              background-color: lightgray;
+  >.SobreMi {
+    font-size: 1.4rem;
+    width: 95vw;
+    /* height: 25vh; */
+    background-color: aqua;
+  }
 
-                        >.Proyecto {
-                          font-size: 1.75rem;
-                          display: flex;
-                          width: 95vw;
-                          /* height: 25vh; */
-                          text-align: center;
+  >.secciones {
+    width: 95vw;
+    /* height: 25vh; */
+    text-align: center;
+    font-size: 1.75rem;
+    background-color: lightgray;
 
-                          /* background-color: lightgreen; */
+    >.Proyecto {
+      font-size: 1.75rem;
+      display: flex;
+      width: 95vw;
+      /* height: 25vh; */
+      text-align: center;
 
-                          >.proyecto1 {
-                            font-size: 1.4rem;
-                            background-color: magenta;
-                                  width: 50vw;
-                          /* height: 25vh; */
-                          }
+      /* background-color: lightgreen; */
 
-                          >.proyecto2 {
-                            font-size: 1.4rem;
-                            background-color: yellow;
-                                  width: 50vw;
-                          /* height: 25vh; */
-                          }
+      >.proyecto1 {
+        font-size: 1.4rem;
+        background-color: magenta;
+        width: 50vw;
+        /* height: 25vh; */
+      }
 
-                        }
+      >.proyecto2 {
+        font-size: 1.4rem;
+        background-color: yellow;
+        width: 50vw;
+        /* height: 25vh; */
+      }
 
-            
+    }
 
-              >.Contacto {
-                font-size: 1.4rem;
-                width: 95vw;
-                /* height: 25vh; */
-                background-color: lightcoral;
-              }
+
+
+    >.Contacto {
+      font-size: 1.4rem;
+      width: 95vw;
+      /* height: 25vh; */
+      background-color: lightcoral;
+    }
 
     /* >.footer {
       display: flex;
@@ -182,28 +188,32 @@ main {
   }
 
 }
-.footer{
+
+.footer {
   background-color: lightgray;
   /* text-align: center; */
   height: 18vh;
   width: 95hw;
   padding: 1rem;
   text-align: center;
-  > p {
+
+  >p {
     font-size: 1rem;
     text-align: center;
   }
+
   >.info {
     font-size: 1.2rem;
     background-color: lime;
   }
 }
+
 /* Botongithubabajo */
 .btn-github {
   cursor: pointer;
   gap: left;
   display: flex;
-  
+
   border: none;
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   border-radius: 100px;
