@@ -1,3 +1,4 @@
+// hola
 (() => {
   const hero = document.querySelector(".Inicio");
   const canvas = document.querySelector(".scalesCanvas");
