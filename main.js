@@ -231,3 +231,20 @@
   cards.forEach((c) => c.addEventListener("click", openModal));
   dialog.addEventListener("click", closeModal);
 })();
+// formulario contacto
+(() => {
+  const formulario = document.querySelector("#formulario-contacto");
+  const botonEnviar = document.querySelector("#formulario-contacto .contactBtn");
+  const nombreInput = document.querySelector("#nombre-contacto");
+  const mensaje = document.querySelector("#mensaje-contacto");
+
+  if (!formulario || !botonEnviar || !nombreInput || !mensaje) return;
+
+  botonEnviar.addEventListener("click", () => {
+    const nombre = nombreInput.value.trim();
+    mensaje.textContent = nombre
+      ? `Gracias ${nombre}. Dentro de poco me pondre en contacto contigo.`
+      : "Dentro de poco me pondre en contacto contigo.";
+    mensaje.classList.add("is-visible");
+  });
+})();

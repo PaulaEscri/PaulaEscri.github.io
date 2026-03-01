@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -33,9 +33,8 @@
   <main>
     <section class="Inicio" id="inicio">
       <canvas class="scalesCanvas" aria-hidden="true"></canvas>
-      <p class="Bienvenido">¡Bienvenido al Portafolio de Paula Escribano Reina!</p>
-      <div class="ContenidoInicio">
-      </div>
+      <p class="Bienvenido">!Bienvenido al Portafolio de Paula Escribano Reina!</p>
+      <div class="ContenidoInicio"></div>
     </section>
 
     <section class="SobreMi" id="sobre-mi">
@@ -51,13 +50,9 @@
         <button class="skillCard item" data-layout-id="js" data-duration="650">
           <h2 data-layout-id="js-title">JavaScript</h2>
           <h3 data-layout-id="js-level">Intermedio</h3>
-
-          <!-- texto en el modal -->
           <p>
             ES6+, DOM, fetch, validaciones, async/await, buenas prácticas.
           </p>
-
-          <!-- datos para barritas d habilidades -->
           <div class="skillMeta" data-skill="70" data-layout-id="js-meta"></div>
         </button>
 
@@ -85,23 +80,28 @@
       <h2>Mis Proyectos</h2>
       <p>Próximamente...</p>
     </section>
-
-
   </main>
 
   <footer class="footer" id="contacto">
     <section class="info">
-      <!-- <p>Contacto:</p>
+      <h2 class="contactTitle">Contacto</h2>
+      <form id="formulario-contacto" class="contactForm">
+        <div class="contactField">
+          <label for="nombre-contacto">Nombre</label>
+          <input id="nombre-contacto" name="nombre" type="text" placeholder="Tu nombre" required>
+        </div>
 
-      <aside class="redes">
-        <p>Sígueme en mis redes sociales:</p>
-        <button class="btn-github">
-          <span>View on Github</span>
-        </button>
-      </aside> -->
+        <div class="contactField">
+          <label for="gmail-contacto">Gmail</label>
+          <input id="gmail-contacto" name="gmail" type="email" placeholder="tuemail@gmail.com" required>
+        </div>
+
+        <button class="contactBtn" type="button">Enviar</button>
+        <p id="mensaje-contacto" class="contactFeedback" aria-live="polite"></p>
+      </form>
     </section>
 
-    <p>2025 © Paula Escribano Reina</p>
+    <p>2025 &copy; Paula Escribano Reina</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/animejs/dist/bundles/anime.umd.min.js"></script>

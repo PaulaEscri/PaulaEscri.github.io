@@ -11,7 +11,7 @@ html {
 
 body {
   margin: 0;
-  Font-family: arial;
+  font-family: 'Inter', Arial, sans-serif;
 
   background: #C00077;
   background: linear-gradient(90deg,
@@ -44,37 +44,36 @@ body {
 
 
 #menu.barra {
-  width: 95vw;
-  margin: 4vh auto;
-  /* padding: 14px 40px; */
-  border-radius: 30vh;
-  height: 22vh;
+  width: min(97vw, 1320px);
+  margin: 2.2vh auto 0;
+  border-radius: 34px;
+  height: clamp(146px, 20.5vh, 214px);
   display: flex;
-  font-variant: small-caps;
+  font-variant: normal;
 
   position: sticky;
   top: 2vh;
   z-index: 1000;
 
   align-items: center;
-  justify-content: space-between;
-  padding: 0 5vw;
+  justify-content: flex-start;
+  padding: 0 clamp(16px, 3.2vw, 38px);
 
-  background: #264654;
-  background: radial-gradient(circle, rgba(38, 70, 84, 1) 0%, rgba(150, 0, 90, 1) 94%);
-  box-shadow: 5px 5px 30px 5px;
+  background: linear-gradient(90deg, #c00077 0%, #8a1a6d 55%, #0f6175 100%);
+  box-shadow: none;
+  border: none;
 
   >.logo {
     margin: 0;
-    margin-right: 4vw;
+    margin-right: clamp(18px, 3.2vw, 46px);
+    flex-shrink: 0;
   }
 
   >.logo img {
-    width: 20vh;
-    height: 20vh;
-    inline-size: 1;
-    border-radius: 15vw;
-    border: 3px solid rgb(0, 0, 0);
+    width: clamp(100px, 13.2vw, 138px);
+    height: clamp(100px, 13.2vw, 138px);
+    border-radius: 50%;
+    border: 2px solid rgb(0, 0, 0);
     object-fit: cover;
   }
 
@@ -83,7 +82,10 @@ body {
     list-style: none;
     margin: 0;
     display: flex;
-    gap: 2vw;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: clamp(14px, 2.6vw, 42px);
 
     /* width: 120vh; */
 
@@ -91,9 +93,12 @@ body {
 
       text-decoration: none;
       color: white;
-      font-size: 2vw;
+      font-size: clamp(1.05rem, 1.35vw, 2rem);
+      font-weight: 600;
       transition: .25s;
-      padding: 2vw;
+      padding: 6px 8px;
+      line-height: 1.15;
+      text-align: center;
 
       /* margin-right: 5vw; */
     }
@@ -111,29 +116,25 @@ body {
 
 main {
   width: 95vw;
-  /* height: 300vh; REMOVED excessive fixed height */
   min-height: 100vh;
   margin: auto;
 
   section {
     margin-bottom: 11vw;
-    /* height: 60vh; Removed to allow dynamic height */
     scroll-margin-top: 25vh;
-    /* Fix for sticky header overlap */
   }
 
   >.Inicio {
-    /* margin: 2vh; */
-    /* font-size: rem; */
     font-weight: bold;
     min-height: 80vh;
 
-    /* background-color: white; */
     p {
       font-family: 'Inter';
-      font-size: 3rem;
+      font-size: clamp(2rem, 6vw, 4rem);
+      font-weight: 800;
       color: #ffffff;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(192, 0, 119, 0.5);
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.28), 0 0 10px rgba(192, 0, 119, 0.22);
+      line-height: 1.1;
 
       text-align: center;
 
@@ -141,7 +142,7 @@ main {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 100%;
+      width: min(92vw, 20ch);
       margin: 0;
       padding: 0 1rem;
     }
@@ -160,7 +161,6 @@ main {
     text-align: center;
     font-size: 1.75rem;
     color: antiquewhite;
-    /* background-color: lightgray; Removed */
 
     p {
       font-size: 1.4rem;
@@ -175,7 +175,7 @@ main {
     width: 95vw;
     color: antiquewhite;
     text-align: center;
-    /* background-color: lightcoral; Removed */
+
   }
 
   /* >.footer {
@@ -189,13 +189,11 @@ main {
 
 
 .footer {
-  /* background-color: lightgray; Removed */
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   /* text-align: center; */
   min-height: 18vh;
   width: 95vw;
-  /* Fixed typo 95hw */
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -211,12 +209,82 @@ main {
 
   >.info {
     font-size: 1.2rem;
-    /* background-color: lime; Removed */
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
   }
+}
+
+.contactTitle {
+  margin: 0;
+  font-family: 'Inter';
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: antiquewhite;
+}
+
+.contactForm {
+  width: min(560px, 100%);
+  display: grid;
+  gap: 0.8rem;
+}
+
+.contactField {
+  display: grid;
+  gap: 0.35rem;
+  text-align: left;
+}
+
+.contactField label {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.contactField input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 0.98rem;
+  padding: 0.72rem 0.85rem;
+}
+
+.contactField input::placeholder {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.contactBtn {
+  border: none;
+  border-radius: 10px;
+  background: #e34a9b;
+  color: #ffffff;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 0.98rem;
+  font-weight: 700;
+  padding: 0.74rem 1rem;
+  cursor: pointer;
+  transition: filter .2s ease, transform .2s ease;
+}
+
+.contactBtn:hover {
+  filter: brightness(1.07);
+  transform: translateY(-1px);
+}
+
+.contactFeedback {
+  margin: 0.15rem 0 0;
+  min-height: 1.3rem;
+  font-size: 0.96rem;
+  color: #d7ffe3;
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+.contactFeedback.is-visible {
+  opacity: 1;
 }
 
 /* skills */
@@ -375,4 +443,87 @@ main {
   font-family: 'Inter';
   font-size: 0.9rem;
   opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  #menu.barra {
+    height: auto;
+    border-radius: 20px;
+    padding: 10px 14px;
+    margin: 2.5vh auto;
+    gap: 10px;
+  }
+
+  #menu.barra>.logo {
+    margin-right: 0;
+  }
+
+  #menu.barra>.logo img {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    border-width: 2px;
+  }
+
+  #menu.barra>.lista {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+  }
+
+  #menu.barra>.lista>.link {
+    font-size: 0.9rem;
+    padding: 6px 8px;
+    white-space: nowrap;
+  }
+
+  main section {
+    scroll-margin-top: 210px;
+  }
+}
+
+@media (max-width: 640px) {
+  #menu.barra {
+    width: 94vw;
+    top: 1vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 8px 10px;
+    gap: 8px;
+    box-shadow: none;
+  }
+
+  #menu.barra>.logo img {
+    width: 64px;
+    height: 64px;
+  }
+
+  #menu.barra>.lista {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px 8px;
+  }
+
+  #menu.barra>.lista>.link {
+    font-size: 0.82rem;
+    padding: 5px 6px;
+  }
+
+  main>.Inicio {
+    min-height: 68vh;
+  }
+
+  main>.Inicio p {
+    font-size: clamp(1.9rem, 10vw, 2.8rem);
+    width: min(92vw, 16ch);
+  }
+
+  .SobreMi,
+  .secciones,
+  .footer {
+    width: 94vw;
+  }
 }
