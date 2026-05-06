@@ -2,109 +2,298 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paula Escribano | Portfolio</title>
 
-  <link rel="stylesheet" href="./estilo.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="./estilo.css" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
 </head>
 
 <body>
+  <div class="pageGlow pageGlowOne"></div>
+  <div class="pageGlow pageGlowTwo"></div>
 
   <nav id="menu" class="barra">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <figure class="logo">
+        <img src="./fotos/LogoPaula1.png" alt="Logo Paula Escribano" />
+      </figure>
+      <div class="brandText">
+        <span class="brandName">Paula Escribano</span>
+        <span class="brandRole">Portfolio · Soluciones web y digitales</span>
+      </div>
+    </a>
 
-    <figure class="logo">
-      <img src="./fotos/LogoPaula1.png" alt="Logo">
-    </figure>
-
-    <article class="lista">
+    <div class="lista">
       <a class="link activo" href="#inicio">Inicio</a>
-      <a class="link" href="#proyectos">Mis Proyectos</a>
-      <a class="link" href="#sobre-mi">Sobre mí</a>
+      <a class="link" href="#proyectos">Proyectos</a>
+      <a class="link" href="#valor">Qué puedo aportar</a>
+      <a class="link" href="#stack">Stack</a>
       <a class="link" href="#contacto">Contacto</a>
-    </article>
+    </div>
   </nav>
 
-  <main>
-    <section class="Inicio" id="inicio">
-      <canvas class="scalesCanvas" aria-hidden="true"></canvas>
-      <p class="Bienvenido">!Bienvenido al Portafolio de Paula Escribano Reina!</p>
-      <div class="ContenidoInicio"></div>
+  <main class="layout">
+    <section class="hero" id="inicio">
+      <div class="heroContent">
+        <p class="eyebrow">Desarrollo · Datos · Automatización · Diseño</p>
+        <h1>Creo soluciones web y digitales adaptadas a cada proyecto.</h1>
+        <p class="heroText">
+          Soy Paula Escribano y me interesa desarrollar soluciones que se adapten a lo que
+          cada persona, negocio o idea necesita. Me gusta combinar desarrollo, estructura,
+          bases de datos, automatización, diseño visual y despliegue para construir proyectos
+          funcionales, claros y bien presentados.
+        </p>
+
+        <div class="heroActions">
+          <a class="primaryBtn" href="#proyectos">Ver proyectos</a>
+          <a class="secondaryBtn" href="#valor">Qué puedo aportar</a>
+        </div>
+      </div>
+
+      <aside class="heroCard">
+        <p class="heroMiniTitle">Cómo entiendo los proyectos</p>
+
+        <div class="heroPoints">
+          <article>
+            <span>01</span>
+            <div>
+              <h3>Adaptación real</h3>
+              <p>Busco que cada solución encaje con lo que el proyecto necesita de verdad.</p>
+            </div>
+          </article>
+
+          <article>
+            <span>02</span>
+            <div>
+              <h3>Visión completa</h3>
+              <p>No me centro en una sola parte: me interesa conectar diseño, lógica y estructura.</p>
+            </div>
+          </article>
+
+          <article>
+            <span>03</span>
+            <div>
+              <h3>Funcionalidad y presentación</h3>
+              <p>Quiero que los proyectos funcionen bien y además comuniquen bien lo que ofrecen.</p>
+            </div>
+          </article>
+        </div>
+      </aside>
     </section>
 
-    <section class="SobreMi" id="sobre-mi">
-      <h2>Sobre mí</h2>
-      <p>Soy Paula Escribano, estoy estudiando un Grado Superior de Desarrollo Web y con ganas de desarrollar proyectos
-        y darles vida.</p>
+    <section class="projectsSection" id="proyectos">
+      <div class="sectionHeading">
+        <p class="sectionKicker">Proyectos</p>
+        <h2>Una selección de trabajos y propuestas reales</h2>
+        <p>
+          Esta parte del portfolio está pensada para enseñar cómo enfoco cada proyecto:
+          qué necesidad cubre, cómo se presenta y qué tipo de solución puede aportar.
+        </p>
+      </div>
+
+      <article class="projectCard">
+        <div class="projectVisual projectVisualFrame">
+          <div class="projectBrowserBar" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <strong>MOMBÚ Brunch & Burger</strong>
+          </div>
+
+          <iframe
+            class="projectPreview"
+            src="https://paulaescri.github.io/demo-web-mombu/"
+            title="Vista previa del proyecto MOMBÚ Brunch & Burger"
+            loading="lazy"></iframe>
+        </div>
+
+        <div class="projectContent">
+          <p class="projectTag">Web Restaurante</p>
+          <h3>MOMBÚ Brunch & Burger</h3>
+
+          <p class="projectText">
+            Landing page para un brunch y burger bar en Torrellano, planteada como una solución
+            visual y funcional para mostrar marca, carta, horario, galería y ubicación de una forma
+            clara, atractiva y útil para el cliente.
+          </p>
+
+          <div class="projectTechs">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Responsive</span>
+          </div>
+
+          <ul class="projectList">
+            <li>Presentación visual orientada a negocio y experiencia</li>
+            <li>Estructura clara para enseñar información útil al usuario</li>
+            <li>Diseño responsive y enfoque práctico de comunicación</li>
+          </ul>
+
+          <div class="projectLinks">
+            <a class="projectBtn" href="https://paulaescri.github.io/demo-web-mombu/" target="_blank"
+              rel="noopener noreferrer">Ver proyecto</a>
+            <a class="projectBtn projectBtnAlt" href="https://github.com/paulaescri" target="_blank"
+              rel="noopener noreferrer">Ver GitHub</a>
+          </div>
+        </div>
+      </article>
     </section>
 
-    <section class="Skills" id="skills">
-      <h2 class="skillsTitle">Skills</h2>
+    <section class="valueSection" id="valor">
+      <div class="sectionHeading">
+        <p class="sectionKicker">Qué puedo aportar</p>
+        <h2>Soluciones pensadas para encajar con cada necesidad</h2>
+        <p>
+          Me interesa trabajar proyectos desde una visión amplia, adaptando la solución a lo
+          que se necesita: desde la parte visual y estructural hasta la lógica, los datos,
+          la automatización o la publicación final.
+        </p>
+      </div>
 
-      <div class="skills-grid" id="skills-grid">
-        <button class="skillCard item" data-layout-id="js" data-duration="650">
-          <h2 data-layout-id="js-title">JavaScript</h2>
-          <h3 data-layout-id="js-level">Intermedio</h3>
+      <div class="valueGrid">
+        <article class="valueCard">
+          <h3>Desarrollo web</h3>
           <p>
-            ES6+, DOM, fetch, validaciones, async/await, buenas prácticas.
+            Creación de interfaces y estructuras web cuidadas, claras y funcionales, pensando
+            tanto en la experiencia de usuario como en la utilidad real del proyecto.
           </p>
-          <div class="skillMeta" data-skill="70" data-layout-id="js-meta"></div>
-        </button>
+        </article>
 
-        <button class="skillCard item" data-layout-id="css" data-duration="650">
-          <h2 data-layout-id="css-title">CSS</h2>
-          <h3 data-layout-id="css-level">Intermedio</h3>
+        <article class="valueCard">
+          <h3>Backend y datos</h3>
           <p>
-            Flexbox, grid, responsive, micro-interacciones, layout.
+            Interés y base para trabajar también la parte de lógica, organización de datos,
+            bases de datos relacionales y desarrollo más completo de las soluciones.
           </p>
-          <div class="skillMeta" data-skill="70" data-layout-id="css-meta"></div>
-        </button>
+        </article>
 
-        <button class="skillCard item" data-layout-id="node" data-duration="650">
-          <h2 data-layout-id="node-title">Node.js</h2>
-          <h3 data-layout-id="node-level">Básico</h3>
+        <article class="valueCard">
+          <h3>Automatización</h3>
           <p>
-            Express, APIs REST, JWT, bcrypt, estructura backend.
+            Uso de automatizaciones, bots y flujos con herramientas como n8n para crear procesos
+            más eficientes y adaptados a tareas reales.
           </p>
-          <div class="skillMeta" data-skill="55" data-layout-id="node-meta"></div>
-        </button>
+        </article>
+
+        <article class="valueCard">
+          <h3>Diseño y despliegue</h3>
+          <p>
+            Cuidado de la presentación visual, uso de herramientas de diseño y publicación web
+            para dejar proyectos listos para enseñar, usar o seguir desarrollando.
+          </p>
+        </article>
+      </div>
+
+      <div class="funFacts">
+        <h3>Mi forma de trabajar</h3>
+        <div class="funFactsList">
+          <span>Me gusta entender qué necesita realmente cada proyecto</span>
+          <span>Busco unir funcionalidad, estructura y presentación</span>
+          <span>No me cierro a una sola parte del desarrollo</span>
+          <span>Me interesa crear soluciones útiles y adaptables</span>
+        </div>
       </div>
     </section>
 
-    <section class="secciones" id="proyectos">
-      <h2>Mis Proyectos</h2>
-      <p>Próximamente...</p>
+    <section class="stackSection" id="stack">
+      <div class="sectionHeading">
+        <p class="sectionKicker">Stack</p>
+        <h2>Tecnologías y herramientas con las que trabajo</h2>
+        <p>
+          Este stack refleja una forma de trabajar más completa, donde combino desarrollo,
+          datos, automatización, diseño y herramientas de apoyo según lo que pida cada proyecto.
+        </p>
+      </div>
+
+      <div class="stackGrid">
+        <article class="stackCard">
+          <h3>Desarrollo web</h3>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>React</li>
+          </ul>
+        </article>
+
+        <article class="stackCard">
+          <h3>Backend y datos</h3>
+          <ul>
+            <li>C#</li>
+            <li>MySQL</li>
+            <li>SQLite</li>
+            <li>Bases de datos relacionales</li>
+            <li>Estructura de lógica y datos</li>
+          </ul>
+        </article>
+
+        <article class="stackCard">
+          <h3>Automatización y herramientas</h3>
+          <ul>
+            <li>n8n</li>
+            <li>Automatizaciones</li>
+            <li>Bots</li>
+            <li>GitHub</li>
+          </ul>
+        </article>
+
+        <article class="stackCard">
+          <h3>Diseño y producción</h3>
+          <ul>
+            <li>Photoshop</li>
+            <li>Responsive design</li>
+            <li>Despliegue web</li>
+            <li>Presentación de proyectos</li>
+          </ul>
+        </article>
+      </div>
     </section>
   </main>
 
   <footer class="footer" id="contacto">
-    <section class="info">
-      <h2 class="contactTitle">Contacto</h2>
+    <div class="footerTop">
+      <div class="footerIntro">
+        <p class="sectionKicker">Contacto</p>
+        <h2>¿Hablamos?</h2>
+        <p>
+          Si te interesa mi perfil, quieres conocer mejor mis proyectos o crees que puedo
+          aportar a una idea o solución digital, puedes contactarme aquí.
+        </p>
+
+        <div class="contactLinks">
+          <a href="mailto:tuemail@gmail.com">tuemail@gmail.com</a>
+          <a href="https://github.com/paulaescri" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+
       <form id="formulario-contacto" class="contactForm">
         <div class="contactField">
           <label for="nombre-contacto">Nombre</label>
-          <input id="nombre-contacto" name="nombre" type="text" placeholder="Tu nombre" required>
+          <input id="nombre-contacto" name="nombre" type="text" placeholder="Tu nombre" required />
         </div>
 
         <div class="contactField">
           <label for="gmail-contacto">Gmail</label>
-          <input id="gmail-contacto" name="gmail" type="email" placeholder="tuemail@gmail.com" required>
+          <input id="gmail-contacto" name="gmail" type="email" placeholder="tuemail@gmail.com" required />
         </div>
 
-        <button class="contactBtn" type="button">Enviar</button>
+        <button class="contactBtn" type="submit">Enviar</button>
         <p id="mensaje-contacto" class="contactFeedback" aria-live="polite"></p>
       </form>
-    </section>
+    </div>
 
-    <p>2025 &copy; Paula Escribano Reina</p>
+    <p class="footerCopy">2025 &copy; Paula Escribano Reina</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/animejs/dist/bundles/anime.umd.min.js"></script>
   <script src="./main.js"></script>
 </body>
 
