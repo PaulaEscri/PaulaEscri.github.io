@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-﻿const navLinks = document.querySelectorAll(".link");
+﻿﻿const navLinks = document.querySelectorAll(".link");
 const sections = document.querySelectorAll("main section[id], footer[id]");
-=======
-// hola
-(() => {
-  const hero = document.querySelector(".Inicio");
-  const canvas = document.querySelector(".scalesCanvas");
-  if (!hero || !canvas) return;
->>>>>>> eb002df2d1ebf571fb595949f35ebb9e4b657914
 
 const setActiveLink = () => {
   let currentId = "inicio";
