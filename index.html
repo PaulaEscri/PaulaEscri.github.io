@@ -92,11 +92,61 @@
       <div class="sectionHeading">
         <p class="sectionKicker">Proyectos</p>
         <h2>Una selección de trabajos y propuestas reales</h2>
-        <p>
+        <!-- <p>
           Esta parte del portfolio está pensada para enseñar cómo enfoco cada proyecto:
           qué necesidad cubre, cómo se presenta y qué tipo de solución puede aportar.
-        </p>
+        </p> -->
       </div>
+
+      <article class="projectCard">
+        <div class="projectVisual projectVisualFrame">
+          <div class="projectBrowserBar" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <strong>KickMatch</strong>
+          </div>
+
+          <iframe
+            class="projectPreview"
+            src="https://kickmatch-web.vercel.app/"
+            title="Vista previa del proyecto KickMatch"
+            loading="lazy"></iframe>
+        </div>
+
+        <div class="projectContent">
+          <p class="projectTag">Aplicación web deportiva</p>
+          <h3>KickMatch</h3>
+
+          <p class="projectText">
+            Plataforma web para organizar partidos de fútbol amateur, conectar jugadores,
+            gestionar equipos y facilitar la participación en encuentros deportivos según
+            disponibilidad, nivel y ubicación.
+          </p>
+
+          <div class="projectTechs">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>Prisma</span>
+            <span>PostgreSQL</span>
+            <span>JWT</span>
+            <span>Vercel</span>
+          </div>
+
+          <ul class="projectList">
+            <li>Registro e inicio de sesión con control de acceso por roles</li>
+            <li>Creación y gestión de partidos, equipos y participantes</li>
+            <li>Interfaz responsive orientada a una experiencia clara y práctica</li>
+          </ul>
+
+          <div class="projectLinks">
+            <a class="projectBtn" href="https://kickmatch-web.vercel.app/" target="_blank"
+              rel="noopener noreferrer">Ver proyecto</a>
+            <a class="projectBtn projectBtnAlt" href="https://github.com/paulaescri" target="_blank"
+              rel="noopener noreferrer">Ver GitHub</a>
+          </div>
+        </div>
+      </article>
 
       <article class="projectCard">
         <div class="projectVisual projectVisualFrame">
@@ -270,28 +320,18 @@
         </p>
 
         <div class="contactLinks">
-          <a href="mailto:tuemail@gmail.com">tuemail@gmail.com</a>
+          <a href="mailto:paulaescri24@gmail.com">paulaescri24@gmail.com</a>
           <a href="https://github.com/paulaescri" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
 
-      <form id="formulario-contacto" class="contactForm">
-        <div class="contactField">
-          <label for="nombre-contacto">Nombre</label>
-          <input id="nombre-contacto" name="nombre" type="text" placeholder="Tu nombre" required />
-        </div>
-
-        <div class="contactField">
-          <label for="gmail-contacto">Gmail</label>
-          <input id="gmail-contacto" name="gmail" type="email" placeholder="tuemail@gmail.com" required />
-        </div>
-
-        <button class="contactBtn" type="submit">Enviar</button>
-        <p id="mensaje-contacto" class="contactFeedback" aria-live="polite"></p>
-      </form>
+      <!-- <div class="contactSimpleCard" aria-label="Email de contacto">
+        <p class="contactSimpleTitle">Email de contacto</p>
+        <a class="contactEmail" href="mailto:paulaescri24@gmail.com">paulaescri24@gmail.com</a>
+      </div> -->
     </div>
 
-    <p class="footerCopy">2025 &copy; Paula Escribano Reina</p>
+    <p class="footerCopy">2025 &copy; Paula Escribano</p>
   </footer>
 
   <script src="./main.js"></script>
